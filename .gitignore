@@ -1,0 +1,6 @@
+__pycache__/
+.vscode/
+
+input_video.mp4
+output_audio.wav
+output_text.txt
