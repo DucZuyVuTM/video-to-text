@@ -2,7 +2,7 @@ import whisper
 import moviepy.editor as mp  # Version 1.0.3
 
 import curses
-from CLI import options, select_language
+from CLI import select_language
 
 def extract_audio(video_path, audio_path):
     clip = mp.VideoFileClip(video_path)
@@ -17,7 +17,7 @@ def main():
     lang = curses.wrapper(select_language)
 
     if lang == "Other":
-        lang = input("Enter your language code (e.g. en, fr, es, etc.)")
+        lang = input("Enter your language code (e.g. en, fr, es, etc.): ").strip()
 
     if lang == "Exit":
         print("Exited\n")
